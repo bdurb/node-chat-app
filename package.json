@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/bdurb/node-chat-app.git",
   "author": "bdurb <brian@rpmgreenville.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
