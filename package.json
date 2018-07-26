@@ -2,6 +2,12 @@
   "name": "node-chat-app",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "engines": {
+    "node":"10.6.0"
+  },
   "repository": "https://github.com/bdurb/node-chat-app.git",
   "author": "bdurb <brian@rpmgreenville.com>",
   "license": "MIT",
