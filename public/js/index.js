@@ -27,3 +27,15 @@ jQuery('#message-form').on('submit', function (e) {
 
   });
 });
+
+const locationbutton = jQuery('#send-location');
+locationbutton.on('click', function () {
+  if (!navigator.geolocation) {
+    return alert('Geolocation not supported by your browser')
+  }
+  navigator.geolocation.getCurrentPosition(function (position) {
+    console.log(position);
+  }, function() {
+    alert('Unable to fetch location')
+  });
+});
