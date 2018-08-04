@@ -28,6 +28,16 @@ jQuery('#message-form').on('submit', function (e) {
   });
 });
 
+socket.on('newLocationMessage', function(message) {
+  const li = jQuery('<li></li>');
+  const a = jQuery('<a target="_blank">My Current Location</a>');
+
+  li.text(`${message.from}: `);
+  a.attr('href', message.url);
+  li.append(a);
+  jQuery('#messages').append(li);
+});
+
 const locationbutton = jQuery('#send-location');
 locationbutton.on('click', function () {
   if (!navigator.geolocation) {
