@@ -15,4 +15,8 @@ describe('isRealString', () => {
     const result = isRealString('  hello     ');
     expect(result).toBe(true);
   });
+  it('should allow strings with spaces between words', () => {
+    const result = isRealString('hello world');
+    expect(result).toBe(true);
+  });
 });
